@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+ 
 }
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 </style>
