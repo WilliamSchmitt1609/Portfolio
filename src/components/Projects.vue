@@ -1,20 +1,24 @@
 <template>
-    <article v-for="(title, index) in titles" :key="index">
-        <div class="detail">
-            <h3>{{ title }}</h3>
-            <p>{{ content }}</p>
-        </div>
+    <article v-for="(content, title, index) in articles" :key="index">       
+            <div class="detail">
+                <h3>{{ title }}</h3>
+                    <p>{{ content }}</p>
+            </div>
     </article>
 </template>
 
 <script>
 export default {
     name: "ProjectsList",
-
+    props: ['title'],
     data() {
         return{
-            titles: ["OKDO", "Douceur de lire", "Dinoquiz"],
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            articles: {
+            "OKDO": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+            "Douceur de lire": "blablabla", 
+            "Dinoquiz": "Yesyesyes"
+            },
+
         };
     }
 };
